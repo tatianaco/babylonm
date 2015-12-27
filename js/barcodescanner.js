@@ -14,7 +14,7 @@ var exec = require("cordova/exec");
  *
  * @returns {BarcodeScanner}
  */
-function BarcodeScanner() {
+var ScannerLoader = function (require, exports, module) {
 
     /**
      * Encoding constants.
@@ -124,8 +124,9 @@ BarcodeScanner.prototype.encode = function (type, data, successCallback, errorCa
 var barcodeScanner = new BarcodeScanner();
 module.exports = barcodeScanner;
 
-});
+}
 
 ScannerLoader(require, exports, module);
 
 cordova.define("cordova/plugin/BarcodeScanner", ScannerLoader);
+});
