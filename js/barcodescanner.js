@@ -73,7 +73,9 @@ BarcodeScanner.prototype.scan = function (successCallback, errorCallback, config
 	console.log("WEB - in scan func");
     if(config instanceof Array) {
         // do nothing
+        console.log("WEB, scan func - confilg is NOT instance");
     } else {
+    	console.log("WEB, scan func - confiig is instance");
         if(typeof(config) === 'object') {
             config = [ config ];
         } else {
