@@ -1971,16 +1971,14 @@ utils.alert = function(msg) {
 
 });
 
-console.log("WEB - android cordova.js");
-
 window.cordova = require('cordova');
 // file: src/scripts/bootstrap.js
 
 require('cordova/init');
-getScript("js/barcodescanner.js");
+
 getScript("js/device.js");
 getScript("js/inappbrowser.js");
-
+getScript("js/barcodescanner.js");
 getScript("js/cordova_plugins.js");
 
 })();

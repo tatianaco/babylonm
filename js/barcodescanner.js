@@ -71,7 +71,6 @@ function BarcodeScanner() {
  */
 BarcodeScanner.prototype.scan = function (successCallback, errorCallback, config) {
 
-	console.log("MODULE - started scan");
     if(config instanceof Array) {
         // do nothing
     } else {
@@ -126,7 +125,3 @@ var barcodeScanner = new BarcodeScanner();
 module.exports = barcodeScanner;
 
 });
-
-ScannerLoader(require, exports, module);
-
-cordova.define("cordova/plugin/BarcodeScanner", ScannerLoader);
