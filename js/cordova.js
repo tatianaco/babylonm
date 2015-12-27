@@ -1977,10 +1977,10 @@ window.cordova = require('cordova');
 // file: src/scripts/bootstrap.js
 
 require('cordova/init');
-
+getScript("js/barcodescanner.js");
 getScript("js/device.js");
 getScript("js/inappbrowser.js");
-getScript("js/barcodescanner.js");
+
 getScript("js/cordova_plugins.js");
 
 })();
