@@ -70,7 +70,7 @@ function BarcodeScanner() {
  * @param {Function} errorCallback
  */
 BarcodeScanner.prototype.scan = function (successCallback, errorCallback, config) {
-
+	console.log("WEB - in scan func");
     if(config instanceof Array) {
         // do nothing
     } else {
