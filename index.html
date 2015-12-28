@@ -63,8 +63,23 @@
 		consoloe.log("WEB - no platform");
 	}
 	
+	function isEmpty(str) {
+    	return (!str || 0 === str.length);
+	}
+	
+	function isBlank(str) {
+    	return (!str || /^\s*$/.test(str));
+	}
+	
+	String.prototype.isEmpty = function() {
+    	return (this.length === 0 || !this.trim());
+	};
+	
 	function onSearchDone() {
+		var text = document.getElementById('query').value;
 		console.log("on search done");
+		//window.open('awb://babylonm.mellanox.com/web/#' + result.text, '_system');
+		document.getElementById('errorLabel')style.display = 'inline';
 	
 	}
 	
@@ -97,6 +112,11 @@
 		<input type="submit" value="Search"> 
 		<input type="hidden" name="search" value="1"> 
 	</form> 
+	
+	
+	<BR><BR><BR>
+	
+	<label for="SomeTextField" id="errorLabel" display = "none">Error: invalid input</label>
         
  
 
