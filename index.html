@@ -63,6 +63,11 @@
 		consoloe.log("WEB - no platform");
 	}
 	
+	function onSearchDone() {
+		console.log("on search done");
+	
+	}
+	
 	
 
 	 
@@ -85,6 +90,13 @@
                                  Click to<b>Scan</b></a>   
   
         <BR><BR><BR>
+        
+        <div> 
+	<form action="onSearchDone();" method="get"> 
+		<input type="text" name="query" id="query" size="40" value=""> 
+		<input type="submit" value="Search"> 
+		<input type="hidden" name="search" value="1"> 
+	</form> 
         
  
 
