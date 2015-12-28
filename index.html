@@ -78,9 +78,12 @@
 	function onSearchDone() {
 		var text = document.getElementById('query').value;
 		console.log("on search done, value = " + text );
-		//window.open('awb://babylonm.mellanox.com/web/#' + result.text, '_system');
-		document.getElementById('errorLabel').style.display = 'inline';
-	
+		if (text.isEmpty() || text.isBlank()) {
+			document.getElementById('errorLabel').style.display = 'inline';
+		}
+		else {
+			window.open('awb://babylonm.mellanox.com/web/#' + result.text, '_system');
+		}
 	}
 	
 	
@@ -105,6 +108,19 @@
                                  Click to<b>Scan</b></a>   
   
         <BR><BR><BR>
+	
+		<label for="SomeTextField" id="errorLabel"  color="red"  style="display: none;" >Error: invalid input</label>
+        
+        
+        
+        
+        <BR><BR><BR>
+        
+       
+        
+        
+        
+        
         
         <div> 
 	<form action="javascript:onSearchDone();" method="get"> 
@@ -115,8 +131,11 @@
 	
 	
 	<BR><BR><BR>
+        
+        <input type="button" style="background-image:url('assets/scanImage.png')"/>
 	
-	<label for="SomeTextField" id="errorLabel" style="display: none;" >Error: invalid input</label>
+	
+	
         
  
 
