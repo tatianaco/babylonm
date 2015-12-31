@@ -79,9 +79,11 @@
 		var text = document.getElementById('query').value;
 		console.log("on search done, value = " + text );
 		if (text.isEmpty() || text.isBlank()) {
+			console.log("text is invalid");
 			document.getElementById('errorLabel').style.display = 'inline';
 		}
 		else {
+		console.log("goes to open window");
 			window.open('https://babylonm.mellanox.com/web/#' + result.text, '_system');
 		}
 	}
