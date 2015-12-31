@@ -74,7 +74,7 @@ var app = {
                             "Result: " + result.text + "\n" +
                             "Format: " + result.format + "\n" +
                             "Cancelled: " + result.cancelled);
-                        window.open('awb://babylonm.mellanox.com/web/#' + result.text, '_system');
+                        window.open('http://babylonm.mellanox.com/web/#' + result.text, '_system');
                     },
                     function (error) {
                         alert("Scanning failed: " + error);
