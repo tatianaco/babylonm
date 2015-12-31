@@ -70,11 +70,15 @@ var app = {
            
             scanner.scan(
                     function (result) {
+                    	/*
                         alert("We got a barcode\n" +
                             "Result: " + result.text + "\n" +
                             "Format: " + result.format + "\n" +
                             "Cancelled: " + result.cancelled);
-                        window.open('http://babylonm.mellanox.com/web/#' + result.text, '_system');
+                            */
+                            if (result.cancelled == 0) {
+                        		window.open('http://babylonm.mellanox.com/web/#' + result.text, '_system');
+                        	}
                     },
                     function (error) {
                         alert("Scanning failed: " + error);
