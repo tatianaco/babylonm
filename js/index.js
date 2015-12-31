@@ -70,6 +70,7 @@ var app = {
            
             scanner.scan(
                     function (result) {
+                    //remark
                     	/*
                         alert("We got a barcode\n" +
                             "Result: " + result.text + "\n" +
