@@ -75,10 +75,14 @@
     	return (this.length === 0 || !this.trim());
 	};
 	
+	String.prototype.isEmpty = function() {
+    	return (!this || /^\s*$/.test(this));
+	};
+	
 	function onSearchDone() {
 		var text = document.getElementById('query').value;
 		console.log("on search done, value = " + text );
-		if (text.isEmpty() || isBlank(text) || isEmpty(text) ) {
+		if (text.isEmpty() || text.isBlank()) {
 			console.log("text is invalid");
 			document.getElementById('errorLabel').style.display = 'inline';
 		}
