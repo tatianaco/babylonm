@@ -101,9 +101,9 @@
 
 
        <BR><BR><BR>
-       
-	<button type=submit onclick="javascript:app.scan();" style="background: #ccc url(assets/scanImage.png); padding: 0.5em 1em ; background-color: transparent; border: none !important; height: 135pt ; width: 230pt; margin:auto;"></button>
-  
+    <div id="buttonDiv" style="width: 230pt; margin:0 auto;">   
+	<button type=submit onclick="javascript:app.scan();" style="background: #ccc url(assets/scanImage.png); padding: 0.5em 1em ; background-color: transparent; border: none !important; height: 135pt ; width: 230pt;"></button>
+  	</div>
         <BR><BR>
 	
 		<label for="SomeTextField" id="errorLabel"  color="red"  style="display: none;" >Error: invalid input</label>
@@ -113,7 +113,7 @@
         
 	
         
-   <div id="mydiv" style="width:230pt;height:105pt;background:#212221" >    
+   <div id="mydiv" style="width:230pt;height:105pt;background:#212221; margin:0 auto;" >    
 	<form action="javascript:onSearchDone();"   method="get" > 
 		<input type="text" name="query" id="query" size="60" value="" placeholder="&#128270  Enter barcode number" style="font-face: 'Comic Sans MS'; width: 180pt; margin-left:25pt; margin-right:25pt;margin-top:25pt; height: 25pt;font-size: larger;"> 
 		 <BR><BR>
