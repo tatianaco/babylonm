@@ -54,7 +54,7 @@ var app = {
     scan: function() {
             console.log('scan(): init');
             console.log('scanning');
-        	setErrorLableInvisible();
+        	window.setErrorLableInvisible();
         	try {
         		var scanner = window.cordova.require('phonegap-plugin-barcodescanner.BarcodeScanner');
         	} catch(e) {
