@@ -4,15 +4,15 @@ html {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    font-size: xx-small;
+    font-size: 7pt;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    opacity:  1;
-   font-size: xx-small;
+   font-size: 7pt;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
    opacity:  1;
-   font-size: xx-small;
+   font-size: 7pt;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   font-size: xx-small;
+   font-size: 7pt;
