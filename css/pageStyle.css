@@ -2,3 +2,17 @@ html {
     height: 100%;
     background: #379ACE;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: xx-small;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   opacity:  1;
+   font-size: xx-small;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   opacity:  1;
+   font-size: xx-small;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-size: xx-small;
