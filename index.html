@@ -90,7 +90,10 @@
 		else {
 		console.log("goes to open window");
 			
-			window.open('http://babylonm.mellanox.com/web/#' + text, '_self' );
+			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_self' );
+			windowref.onload = function() {
+				console.log("ON LOAD!");
+			}
 		}
 	}
 	
