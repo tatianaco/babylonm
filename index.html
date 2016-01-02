@@ -95,7 +95,7 @@
 			
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
 			var myWindow = window.open('http://www.google.com' , '_blank' );
-			myWindow.onLoad = function () {
+			myWindow.onload = function () {
 				console.log("LOAD!");
 			}
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
@@ -109,6 +109,14 @@
 			}
 			*/
 		}
+	}
+	
+	document.onload = function () {
+		console.log("DOC LOAD!"
+	}
+	
+	window.onload = function () {
+		console.log("WIN LOAD!");
 	}
 	
 	
