@@ -41,9 +41,7 @@
 	
 	document.addEventListener("DOMContentLoaded", function(event) { 
     	console.log("WEB - DomContentLoaded");
-    	var fragment = create('<div>Hello!</div><p>Hi</p>');
-		// You can use native DOM methods to insert the fragment:
-		document.body.insertBefore(fragment, document.body.childNodes[0]);
+    	
     	
 	});
 	
@@ -98,7 +96,11 @@
 			var openedWindow = window.open('http://www.google.com' , '_blank' );
 			window.setTimeout(function() {
     			console.log("timer fired");
-			}, 2);
+    			var fragment = create('<div>Hello!</div><p>Hi</p>');
+				// You can use native DOM methods to insert the fragment:
+				//document.body.insertBefore(fragment, document.body.childNodes[0]);
+				document.body.innerHTML += '<div style="position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;">Hello</div>';
+			}, 5);
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
 			//print(myWindow);
