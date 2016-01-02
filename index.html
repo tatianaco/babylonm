@@ -97,10 +97,10 @@
 			
 			var openedWindow = window.open('http://www.google.com' , '_blank' );
 			window.setTimeout(function() {
-    			openedWindow.addEventListener("load", function() {
-        			console.log("received load event");
-    			}, false);
-			}, 0);
+    			var fragment = create('<div>Hello!</div><p>Hi</p>');
+				// You can use native DOM methods to insert the fragment:
+				document.body.insertBefore(fragment, document.body.childNodes[0]);
+			}, 2);
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
 			//print(myWindow);
@@ -153,15 +153,7 @@
     });
     */
     
-    document.getElementById('openWindow').onclick = function () {
-      var windowref = window.open('tests2.html');
-      windowref.onload = function() {
-            windowref.onunload =  function () {
-                window.alert('hola!');
-            };
-      }
-};
-
+  
 	
 	
 	
