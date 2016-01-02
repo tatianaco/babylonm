@@ -42,6 +42,26 @@ body.loading {
 body.loading .modal {
     display: block;
 }
+
+#preloader {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    position: fixed;
+    background-color: #fff;
+}
+
+#loading-animation {
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin: -100px 0 0 -100px;
+      background: url('loading-animation.gif') center center no-repeat;
+}
    
    
 

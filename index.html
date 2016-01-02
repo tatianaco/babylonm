@@ -98,18 +98,21 @@
 		document.getElementById('errorLabel').style.display = 'none';
 	}
 	
-	$body = $("body");
+	/* ======== Preloader ======== */
+    $(window).load(function() {
+        var preloaderDelay = 350,
+                preloaderFadeOutTime = 800;
 
-	$(document).on({
-    	ajaxStart: function() {
-    	console.log("ajax start jquery trigger");
-    	 $body.addClass("loading");   
-     },
-     ajaxStop: function() { 
-     	console.log("ajax stop jquery trigger");
-     	$body.removeClass("loading"); 
-     }    
-	});
+        function hidePreloader() {
+            var loadingAnimation = $('#loading-animation'),
+                    preloader = $('#preloader');
+            loadingAnimation.fadeOut();
+            preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
+        }
+
+        hidePreloader();
+    });
+
 	
 	
 	
@@ -150,7 +153,9 @@
 	
 	<BR><BR>
 	
-	<div class="modal"><!-- Place at bottom of page --></div>
+	<div id="preloader">
+    	<div id="loading-animation">&nbsp;</div>
+	</div>
 	
 	
 	
