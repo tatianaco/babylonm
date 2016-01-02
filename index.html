@@ -89,7 +89,7 @@
 		}
 		else {
 		console.log("goes to open window");
-			window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' , 'location=yes');
+			window.open('http://babylonm.mellanox.com/web/#' + text, '_self' );
 		}
 	}
 	
@@ -101,8 +101,14 @@
 	$body = $("body");
 
 	$(document).on({
-    	ajaxStart: function() { $body.addClass("loading");    },
-     	ajaxStop: function() { $body.removeClass("loading"); }    
+    	ajaxStart: function() {
+    	console.log("ajax start jquery trigger");
+    	 $body.addClass("loading");   
+     },
+     ajaxStop: function() { 
+     	console.log("ajax stop jquery trigger");
+     	$body.removeClass("loading"); 
+     }    
 	});
 	
 	
