@@ -89,12 +89,9 @@
 		}
 		else {
 		console.log("goes to open window");
-		
-		var win = window.open();
-		vat scrStr = 'http://babylonm.mellanox.com/web/#' + text;
-		win.document.write('<iframe width="560" height="315" src="//babylonm.mellanox.com/web/#" frameborder="0" allowfullscreen></iframe>')
+			
+			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_self' ,  "width=200,height=200,scrollbars=no");
 			/*
-			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_self' );
 			windowref.onload = function() {
 				console.log("ON LOAD!");
 			}
