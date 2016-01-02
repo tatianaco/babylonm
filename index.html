@@ -94,10 +94,12 @@
 		console.log("goes to open window");
 			
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
-			var myWindow = window.open('http://www.google.com' , '_blank' );
-			myWindow.onload = function () {
+			window.onload = function () {
 				console.log("LOAD!");
 			}
+			
+			var myWindow = window.open('http://www.google.com' , '_blank' );
+			
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
 			//print(myWindow);
@@ -111,13 +113,7 @@
 		}
 	}
 	
-	document.onload = function () {
-		console.log("DOC LOAD!"
-	}
 	
-	window.onload = function () {
-		console.log("WIN LOAD!");
-	}
 	
 	
 	
