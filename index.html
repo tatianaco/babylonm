@@ -94,12 +94,13 @@
 		console.log("goes to open window");
 			
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
-			window.onload = function () {
-				console.log("LOAD!");
-			}
 			
-			var myWindow = window.open('http://www.google.com' , '_blank' );
-			
+			var openedWindow = window.open('http://www.google.com' , '_blank' );
+			window.setTimeout(function() {
+    			openedWindow.addEventListener("load", function() {
+        			console.log("received load event");
+    			}, false);
+			}, 0);
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
 			//print(myWindow);
