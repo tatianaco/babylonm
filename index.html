@@ -93,7 +93,8 @@
 			
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
 			
-			var openedWindow = window.open('http://www.google.com' , '_blank' );
+			var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
+			/*
 			window.setTimeout(function() {
     			console.log("timer fired");
     			var fragment = create('<div>Hello!</div><p>Hi</p>');
@@ -101,6 +102,7 @@
 				//document.body.insertBefore(fragment, document.body.childNodes[0]);
 				document.body.innerHTML += '<div style="position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;">Hello</div>';
 			}, 5);
+			*/
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
 			//print(myWindow);
@@ -116,6 +118,9 @@
 	
 	
 	
+	 $(window).load(function(){
+       $('#dvLoading').fadeOut(2000);
+    });
 	
 	
 	function setErrorLableInvisible(){
@@ -195,7 +200,7 @@
 	<BR><BR>
 	
 	<div id="preloader">
-    	<div id="loading-animation">&nbsp;</div>
+    	<div id="dvLoading"></div>
 	</div>
 	
 	

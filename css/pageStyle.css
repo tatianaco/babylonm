@@ -17,50 +17,15 @@ html {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    font-size: 7pt;
    
-.modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('http://i.stack.imgur.com/FhHRx.gif') 
-                50% 50% 
-                no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
-}
-
-#preloader {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    position: fixed;
-    background-color: #fff;
-}
-
-#loading-animation {
-      top: 50%;
-      left: 50%;
-      width: 200px;
-      height: 200px;
-      position: absolute;
-      margin: -100px 0 0 -100px;
-      background: url('loading-animation.gif') center center no-repeat;
+#dvLoading{
+   background:#000 url(images/loader.gif) no-repeat center center;
+   height: 100px;
+   width: 100px;
+   position: fixed;
+   z-index: 1000;
+   left: 50%;
+   top: 50%;
+   margin: -25px 0 0 -25px;
 }
    
    
