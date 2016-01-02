@@ -41,6 +41,9 @@
 	
 	document.addEventListener("DOMContentLoaded", function(event) { 
     	console.log("WEB - DomContentLoaded");
+    	var fragment = create('<div>Hello!</div><p>Hi</p>');
+		// You can use native DOM methods to insert the fragment:
+		document.body.insertBefore(fragment, document.body.childNodes[0]);
     	
 	});
 	
@@ -115,9 +118,7 @@
     	return frag;
 	}
 
-	var fragment = create('<div>Hello!</div><p>Hi</p>');
-		// You can use native DOM methods to insert the fragment:
-	document.body.insertBefore(fragment, document.body.childNodes[0]);
+	
 	
 	/* ======== Preloader ======== */
 	/*
