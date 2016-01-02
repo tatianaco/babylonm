@@ -97,9 +97,7 @@
 			
 			var openedWindow = window.open('http://www.google.com' , '_blank' );
 			window.setTimeout(function() {
-    			var fragment = create('<div>Hello!</div><p>Hi</p>');
-				// You can use native DOM methods to insert the fragment:
-				document.body.insertBefore(fragment, document.body.childNodes[0]);
+    			console.log("timer fired");
 			}, 2);
 			//myWindow.document.write("<p>This is 'myWindow'</p>");
 			//myWindow.focus();
