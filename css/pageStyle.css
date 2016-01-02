@@ -17,17 +17,7 @@ html {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    font-size: 7pt;
    
-#dvLoading{
-   background:#000 url(images/loader.gif) no-repeat center center;
-   height: 100px;
-   width: 100px;
-   position: fixed;
-   z-index: 1000;
-   left: 50%;
-   top: 50%;
-   margin: -25px 0 0 -25px;
-}
-   
+
    
 
 
