@@ -90,7 +90,8 @@
 		else {
 		console.log("goes to open window");
 			
-			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_self' ,  "width=200,height=200,scrollbars=no");
+			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_top' ,  "width=150,height=150,scrollbars=no");
+			window.moveBy(-10,20);
 			/*
 			windowref.onload = function() {
 				console.log("ON LOAD!");
