@@ -88,11 +88,14 @@
 			document.getElementById('errorLabel').style.display = 'inline';
 		}
 		else {
-		console.log("goes to open window");
+			console.log("goes to open window");
+
 			var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_self' );
+			/*
 			windowref.onload = function() {
 				console.log("ON LOAD!");
 			}
+			*/
 		}
 	}
 	
