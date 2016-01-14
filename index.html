@@ -95,6 +95,8 @@
 			
 			//var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
 			var openedWindow = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
+			document.getElementById('preloaderImg').style.display = 'inline';
+			
 			/*
 			window.setTimeout(function() {
     			console.log("timer fired");
@@ -195,7 +197,7 @@
 	<div id="loading"></div>
 	
 	<div id="preloaderDiv" style="width: 230pt; margin:0 auto; text-align:center;">   
-		<img src="assets/preloader1.gif" alt="" class="hiddenPic" /> 
+		<img id="preloaderImg" src="assets/preloader1.gif" alt="" class="hiddenPic" style="display: none;"/> 
 	</div>
 	
 	
