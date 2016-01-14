@@ -78,7 +78,7 @@ var app = {
                             "Cancelled: " + result.cancelled);
                             */
                             if (result.cancelled == 0) {
-                        		window.open('http://babylonm.mellanox.com/web/#' + result.text, '_system');
+                        		window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_system');
                         	}
                     },
                     function (error) {
