@@ -16,7 +16,13 @@ html {
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    font-size: 7pt;
-   
+
+#hiddenPic {
+  background: url(assets/preloader1.gif);
+  background-repeat:no-repeat;
+  background-position: center; 
+  border-radius: 5pt;
+}
 
    
 
