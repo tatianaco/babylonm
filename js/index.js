@@ -79,7 +79,7 @@ var app = {
                             */
                             if (result.cancelled == 0) {
                             	document.getElementById('preloaderImg').style.display = 'inline';
-                        		window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_system');
+                        		window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_blank');
                         	}
                     },
                     function (error) {
@@ -103,7 +103,7 @@ var app = {
 	 		alert("url = " + url);
 	 		//window.open(url, '_system');
 	 		if (string != null && string != "null" && string != "") {
-	 			window.open(url, '_blank');
+	 			window.open(url , '_blank');
 	 		}
 	 		
         }
