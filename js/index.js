@@ -103,7 +103,7 @@ var app = {
 	 		alert("url = " + url);
 	 		//window.open(url, '_system');
 	 		if (string != null && string != "null" && string != "") {
-	 			window.open(url, '_system');
+	 			window.open(url, '_blank');
 	 		}
 	 		
         }
