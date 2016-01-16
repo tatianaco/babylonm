@@ -16,6 +16,14 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-console/www/logger.js",
+        "id": "cordova-plugin-console.logger",
+        "pluginId": "cordova-plugin-console",
+        "clobbers": [
+            "cordova.logger"
+        ]
     }
   
 ];
@@ -23,7 +31,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-inappbrowser": "1.1.1",
-    "phonegap-plugin-barcodescanner": "4.1.0"
+    "phonegap-plugin-barcodescanner": "4.1.0",
+    "cordova-plugin-console": "1.0.2"
 }
 // BOTTOM OF METADATA
 });
