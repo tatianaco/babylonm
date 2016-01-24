@@ -37,6 +37,7 @@
 		consoloe.log("WEB - no platform");
 	}
 	
+	/*
 	function isEmpty(str) {
     	return (!str || 0 === str.length);
 	}
@@ -52,30 +53,32 @@
 	String.prototype.isBlank = function() {
     	return (!this || /^\s*$/.test(this));
 	};
-	
+	*/
 	
 	function onSearchDone() {
 		var text = document.getElementById('input-field').value;
 		console.log("on search done, value = " + text );
+		/*
 		if (text.isEmpty() || text.isBlank()) {
 			console.log("text is invalid");
 			//document.getElementById('errorLabel').style.display = 'inline';
 		}
 		else {
+		*/
 		console.log("goes to open window");
 			
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
 			
 			//var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
-			document.getElementById('preloader').style.display = 'block';
+			document.getElementById('preloader').style.display = 'inline-block';
 			var ref = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
 	
 			ref.addEventListener('exit', function(event) 
 			{
 				document.getElementById('preloader').style.display = 'none';
-				ocument.getElementById('input-field').value = "";
+				document.getElementById('input-field').value = "";
 			});
-		}
+		//}
 	}
 	
 	
