@@ -7,10 +7,7 @@
 	<script src="js/jquery.js"></script>	
 	<script src="js/index.js"></script>	
 	<script  type="text/javascript" charset="utf-8">
-	
-	
-	
-	
+
 	
 	document.addEventListener("DOMContentLoaded", function(event) { 
     	console.log("WEB - DomContentLoaded");
@@ -22,6 +19,7 @@
 	
 	function getScript(src) {
 		console.log("web - 1.0");
+		console.log("scr in getScript = " + src);
     	var script = document.createElement("script");
     	script.src = src;
     	document.getElementsByTagName("head")[0].appendChild( script );
