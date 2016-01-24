@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<title>Traceability</title>
+	<script src="js/jquery.js"></script>	
 	<script src="js/index.js"></script>	
 	<script  type="text/javascript" charset="utf-8">
 	
@@ -13,7 +14,7 @@
 	
 	document.addEventListener("DOMContentLoaded", function(event) { 
     	console.log("WEB - DomContentLoaded");
-    	document.getElementById('preloaderImg').style.display = 'none';
+    	//document.getElementById('preloaderImg').style.display = 'none';
     	
     	
 	});
@@ -54,6 +55,7 @@
     	return (!this || /^\s*$/.test(this));
 	};
 	
+	/*
 	function onSearchDone() {
 		var text = document.getElementById('query').value;
 		console.log("on search done, value = " + text );
@@ -73,24 +75,17 @@
 			
 		}
 	}
+	*/
 	
 	
 	
 	
 	function setErrorLableInvisible(){
 		console.log("error label sets invisible");
-		document.getElementById('errorLabel').style.display = 'none';
+		//document.getElementById('errorLabel').style.display = 'none';
 	}
 	
-	function create(htmlStr) {
-    	var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
-    	temp.innerHTML = htmlStr;
-    	while (temp.firstChild) {
-        	frag.appendChild(temp.firstChild);
-    	}
-    	return frag;
-	}
+	
 
 	
 	
@@ -118,3 +113,5 @@
 	</div>
 </body>
 </html>
+
+
