@@ -64,6 +64,14 @@ input[type="text"]
   	background-repeat: no-repeat;
 }
 
+.preloader_div{
+	text-align: center;
+}
+
+.preloader {
+	display: none;
+}
+
 
 
 

@@ -67,14 +67,11 @@
 			//var windowref = window.open('http://babylonm.mellanox.com/web/#' + text, '_blank' );
 			
 			//var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
+			document.getElementById('preloader').style.display = 'block';
 			var openedWindow = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
-			//document.getElementById('preloaderImg').style.display = 'inline';
-			
-			
+	
 		}
 	}
-	
-	
 	
 	
 	
@@ -82,12 +79,7 @@
 		console.log("error label sets invisible");
 		//document.getElementById('errorLabel').style.display = 'none';
 	}
-	
-	
 
-	
-	
-	
 
 	</script>
 </header>
@@ -109,7 +101,21 @@
 		<label for="scan_button" class="scan_label">Scan Now</label><br><br>
 		<input type="image" id="scan_button" src="images/scan1.png" onclick="javascript:app.scan();"/>
 	</div>
+	<div class="preloader_div">
+		<img src="images/preloader-2.gif" class="preloader" id="preloader">
+	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -69,7 +69,7 @@
 		console.log("on search done, value = " + text );
 		if (text.isEmpty() || text.isBlank()) {
 			console.log("text is invalid");
-			document.getElementById('errorLabel').style.display = 'inline';
+			//document.getElementById('errorLabel').style.display = 'inline';
 		}
 		else {
 		console.log("goes to open window");
@@ -78,9 +78,7 @@
 			
 			//var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
 			var openedWindow = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
-			document.getElementById('preloaderImg').style.display = 'inline';
-			
-			
+			document.getElementById('preloaderImg').style.display = 'block';
 		}
 	}
 	

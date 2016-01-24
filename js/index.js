@@ -78,8 +78,13 @@ var app = {
                             "Cancelled: " + result.cancelled);
                             */
                             if (result.cancelled == 0) {
-                            	//document.getElementById('preloaderImg').style.display = 'inline';
-                        		window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_blank');
+                            	document.getElementById('preloader').style.display = 'block';
+                        		var ref = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_blank');
+                        		ref.addEventListener('exit', function(event) 
+								{
+									alert('exit');
+								});
+
                         	}
                     },
                     function (error) {
