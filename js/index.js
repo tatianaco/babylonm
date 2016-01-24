@@ -82,7 +82,7 @@ var app = {
                         		var ref = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_blank');
                         		ref.addEventListener('exit', function(event) 
 								{
-									alert('exit');
+									document.getElementById('preloader').style.display = 'none';
 								});
 
                         	}

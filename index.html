@@ -68,8 +68,12 @@
 			
 			//var openedWindow = window.open('http://babylonm.mellanox.com/web/#' + text , '_blank' );
 			document.getElementById('preloader').style.display = 'block';
-			var openedWindow = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
+			var ref = window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + text , '_blank' );
 	
+			ref.addEventListener('exit', function(event) 
+			{
+				document.getElementById('preloader').style.display = 'none';
+			});
 		}
 	}
 	
