@@ -78,7 +78,7 @@ var app = {
                             "Cancelled: " + result.cancelled);
                             */
                             if (result.cancelled == 0) {
-                            	document.getElementById('preloaderImg').style.display = 'inline';
+                            	//document.getElementById('preloaderImg').style.display = 'inline';
                         		window.open('https:/mobile.mellanox.com/mquery/trace.php?search=' + result.text, '_blank');
                         	}
                     },
@@ -86,27 +86,8 @@ var app = {
                         alert("Scanning failed: " + error);
                     }
              );
-        },
-        getDeviceUIID: function () {
-        	console.log("in getDeviceUIID func");
-        	var device = window.cordova.require('cordova-plugin-device.device');
-	 		//var stringUiid = device.uuid;
-	 		//var stringSerial = device.serial;
-	 		
-	 		//console.log("deviceUiid  = " + device.uuid);
-	 		//console.log("deviceSerial = " + device.serial);
-	 		var string = device.uuid;
-	 		//var string = device.serial;
-
-	 		console.log("devicePlatform  = " + string);
-	 		var url = "https://ds503.awmdm.co.uk/devicemanagement/AppCatalog?uid="+string+"&type=5#"
-	 		alert("url = " + url);
-	 		//window.open(url, '_system');
-	 		if (string != null && string != "null" && string != "") {
-	 			window.open(url , '_blank');
-	 		}
-	 		
         }
+     
 };
 console.log("WEB - read index.js");
 app.initialize();
