@@ -1,13 +1,11 @@
 
 html {
   text-align: left;
+  width: 100vw;
 }
 
 body {
 	background-color:#ffffff;
-	margin-left:auto;
-	 margin-right:auto;
-	 width: 100%;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
