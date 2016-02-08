@@ -15,9 +15,7 @@ header {
 	
 }
 
-.searchform {
-	text-align:center;
-}
+
 
 .header-title{
 	color: rgb(106, 108 , 111);
@@ -58,11 +56,14 @@ header {
 	text-align: center;
 }
 
-
+.input_parent {
+	width:100%;
+	text-align: center;
+}
 
 input[type="text"]
 {
-	margin-left: 30px;
+	
 	width: 90%;
 	height:45px;
     font-size:16px;
