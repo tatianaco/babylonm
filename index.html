@@ -10,32 +10,28 @@
 	var nv_lon = 0;
 
 	geo_sites[ 0 ] = [ 'Yokneam Site', 32.6634631, 35.1053271 ];
-	geo_sites[ 1 ] = [ 'Kochav Site', 32.661048, 35.105712  ];
-	geo_sites[ 2 ] = [ 'Tel-Aviv Site', 32.1070092, 34.836605 ];
-	geo_sites[ 3 ] = [ 'Raanana Site', 32.1981555, 34.8812167 ];
-	geo_sites[ 4] = [ 'Kiryat Gat Site', 31.606489, 34.783231 ];
-	geo_sites[ 5 ] = [ 'Ramat-Gan Site', 32.0847279,34.8032783 ];
-	geo_sites[ 6 ] = [ 'Beer-Sheva Site',31.264053,34.814279];
-	geo_sites[ 7 ] = [ 'Tel-Hai Site', 33.2359534,35.5791783 ];
-	
-	
+	geo_sites[ 1 ] = [ 'Tel-Aviv Site', 32.1070092, 34.836605 ];
+	geo_sites[ 2 ] = [ 'Raanana Site', 32.1981555, 34.8812167 ];
+	geo_sites[ 3 ] = [ 'Ramat-Gan Site', 32.0847279,34.8032783 ];
+	geo_sites[ 4 ] = [ 'Beer-Sheva Site',31.264053,34.814279];
+	geo_sites[ 5 ] = [ 'Tel-Hai Site', 33.2359534,35.5791783 ];
 
-	geo_sites[ 8 ] = [ 'Sunnyvale Site', 37.3788315, -121.98881 ];
-	geo_sites[9 ] = [ 'Boston Site - MTB', 42.5984411,-71.3294245 ];
-	geo_sites[ 10 ] = [ 'Boston Site - MTBU', 42.281124, -71.572612  ];
-	geo_sites[ 11 ] = [ 'Austin Site', 30.3978941,-97.7297516 ];
-	geo_sites[ 12 ] = [ 'Redmond Site',47.6808206,-122.1324999];
-	geo_sites[ 13 ] = [ 'Taiwan Site',25.0742254,121.5763775];
-	geo_sites[ 14 ] = [ 'Beijing Site',39.9740321,116.3046697];
-	geo_sites[ 15 ] = [ 'Denmark Site',55.623264,12.0578227];
-	geo_sites[ 16 ] = [ 'Japan Site',35.6904433,139.6978957];
-	geo_sites[ 17 ] = [ 'Monterey Park Site',34.0462349,-118.1628729];
-	geo_sites[ 18 ] = [ 'Berkshire Site',51.519561, -0.721113];
-	geo_sites[ 19 ] = [ 'New York Site',40.7095563,-74.0087531];
-	geo_sites[ 20 ] = [ 'North Carolina Site',35.8804253,-78.8399453];
+	geo_sites[ 6 ] = [ 'Sunnyvale Site', 37.3788315, -121.98881 ];
+	geo_sites[ 7 ] = [ 'Boston Site - MTB', 42.5984411,-71.3294245 ];
+	geo_sites[ 8 ] = [ 'Austin Site', 30.3978941,-97.7297516 ];
+	geo_sites[ 9 ] = [ 'Redmond Site',47.6808206,-122.1324999];
+	geo_sites[ 10 ] = [ 'Taiwan Site',25.0742254,121.5763775];
+	geo_sites[ 11 ] = [ 'Beijing Site',39.9740321,116.3046697];
+	geo_sites[ 12 ] = [ 'Denmark Site',55.623264,12.0578227];
+	geo_sites[ 13 ] = [ 'Japan Site',35.6904433,139.6978957];
+	geo_sites[ 14 ] = [ 'Monterey Park Site',34.0462349,-118.1628729];
+	geo_sites[ 15 ] = [ 'New York Site',40.7095563,-74.0087531];
+	geo_sites[ 16 ] = [ 'North Carolina Site',35.8804253,-78.8399453];
 
-
-
+	geo_sites[ 17 ] = [ 'Kochav Site',32.661048, 35.105712];
+	geo_sites[ 18 ] = [ 'Kiryat Gat Site',31.605481, 34.783506];
+	geo_sites[ 19 ] = [ 'Berkshire Site',51.519561, -0.721113];
+	geo_sites[ 20 ] = [ 'Boston Site - MTBU',42.281124, -71.572612];
 
 	nv_apps[ 0 ] = [ 'Waze<BR>App', '#B1E4E3', '#81B4C3', '#ffffff' ];
 	nv_apps[ 1 ] = [ 'Google<BR>Maps', '#A6FFE1', '#17A662', '#BA0000' ];
@@ -52,15 +48,12 @@ function navigate( i ){
 
 	if ( nv_selected ==0 )
 		location = "waze://?ll=" + geo_sites[i][1] +  "," + geo_sites[i][2] +  "&navigate=yes";
-
 	
 	if ( nv_selected ==1 ) 
 		location = "http://maps.google.com/?q=" + geo_sites[i][1] +  "," + geo_sites[i][2] +  "&z=17&navigate=yes" ;
 
 	if ( nv_selected ==2 ) 
-		location = "http://maps.apple.com/?q=Mellanox&ll=" + geo_sites[i][1] +  "," + geo_sites[i][2] +  "&z=17&navigate=yes" ;
-
-
+		location = "http://maps.apple.com/?q=" + geo_sites[i][1] +  "," + geo_sites[i][2] +  "&z=17&navigate=yes" ;
 	
 }
 
@@ -72,8 +65,6 @@ function btnSelected(id) {
 
 		document.getElementById(id).style.borderColor="#3498db";
 		document.getElementById(id).style.backgroundColor="rgba(32, 77, 116, 0.77)";
-
-		// nv_but_" + i +
 
 	}
 function showPosition(position) {
@@ -129,8 +120,6 @@ document.getElementById( "geo_buttons").innerHTML = '';
 	} else dkm = 0;
 	
 	geo_sites[ i ] [ 10 ] = dkm;
-	
-		
 		
 	}
 	
@@ -153,14 +142,10 @@ document.getElementById( "geo_buttons").innerHTML = '';
 	
 	if ( dkm ){
 		document.getElementById( "geo_buttons").innerHTML += "<button type=button onClick='navigate( "+ i + " )' class='btn btn-info btn-lg btn-block' " + ( dkm > 1000 ? "style='background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);'" : '' )  +  "  >" + geo_sites[i][0] + " " + ( dkm > 1000 ? "<span class='glyphicon glyphicon glyphicon-plane' aria-hidden=true></span>" : "" ) + "" + "</button>";
-		
-		
-		
 	}
 	else
 		document.getElementById( "geo_buttons").innerHTML += "<button type=button onClick='navigate( "+ i + " )' class='btn btn-info btn-lg btn-block'>" + geo_sites[i][0] + "</button>";
 	}
-	
 
 }
 function nv_apps_draw(){
@@ -174,21 +159,10 @@ function nv_apps_draw(){
 	
 }
 function nv_select( i ){
-	//document.getElementById( "nv_but_" + nv_selected).style.backgroundColor = nv_apps[ nv_selected][1];
-	//document.getElementById( "nv_but_" + nv_selected).style.fontWeight = '';
 	nv_selected = i;
-	//document.getElementById( "nv_but_" + i).style.backgroundColor = nv_apps[ nv_selected][2];
-	//document.getElementById( "nv_but_" + i).style.fontWeight = 'bold';
-
 }
 
-    
-
 </script>
-
-
-	
-	
   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -196,23 +170,23 @@ function nv_select( i ){
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Drive To</title>
+	<title>Drive To</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="./Drive To_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./Drive To_original_files/bootstrap.min.css">
 
 	<!-- Vendor styles-->
-	<link rel="stylesheet" href="./Drive To_files/font-awesome.css">
-	<link rel="stylesheet" href="./Drive To_files/metisMenu.css">
-	<link rel="stylesheet" href="./Drive To_files/animate.css">
-	<link rel="stylesheet" href="./Drive To_files/bootstrap.css">
+	<link rel="stylesheet" href="./Drive To_original_files/font-awesome.css">
+	<link rel="stylesheet" href="./Drive To_original_files/metisMenu.css">
+	<link rel="stylesheet" href="./Drive To_original_files/animate.css">
+	<link rel="stylesheet" href="./Drive To_original_files/bootstrap.css">
 
 	<!-- App styles-->
-	<link rel="stylesheet" href="./Drive To_files/pe-icon-7-stroke.css">
-	<link rel="stylesheet" href="./Drive To_files/helper.css">
-	<link rel="stylesheet" href="./Drive To_files/style.css">
+	<link rel="stylesheet" href="./Drive To_original_files/pe-icon-7-stroke.css">
+	<link rel="stylesheet" href="./Drive To_original_files/helper.css">
+	<link rel="stylesheet" href="./Drive To_original_files/style.css">
 
-  </head>
+</head>
   <body style="background-color: #eee;" onload="nv_apps_draw(); nv_sites_draw(); if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(showPosition); }  ">
 
 
@@ -230,7 +204,7 @@ function nv_select( i ){
 		  <p class="text-muted text-center" style="padding-top: 18px;">
 			  Choose your destination site
 		  </p>
-		  <div id="geo_buttons" stsle="margin:15;"><button type="button" onclick="navigate( 0 )" class="btn btn-info btn-lg btn-block">Yokneam Site </button><button type="button" onclick="navigate( 1 )" class="btn btn-info btn-lg btn-block">Raanana Site </button><button type="button" onclick="navigate( 2 )" class="btn btn-info btn-lg btn-block">Tel-Aviv Site </button><button type="button" onclick="navigate( 3 )" class="btn btn-info btn-lg btn-block">Ramat-Gan Site </button><button type="button" onclick="navigate( 4 )" class="btn btn-info btn-lg btn-block">Tel-Hai Site </button><button type="button" onclick="navigate( 5 )" class="btn btn-info btn-lg btn-block">Beer-Sheva Site </button><button type="button" onclick="navigate( 6 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Denmark Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 7 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Beijing Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 8 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Taiwan Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 9 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Boston Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 10 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">New York Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 11 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Japan Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 12 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">North Carolina Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 13 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Redmond Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 14 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Austin Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 15 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Sunnyvale Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 16 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Monterey Park Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button></div>
+		  <div id="geo_buttons" stsle="margin:15;"><button type="button" onclick="navigate( 0 )" class="btn btn-info btn-lg btn-block">Yokneam Site</button><button type="button" onclick="navigate( 1 )" class="btn btn-info btn-lg btn-block">Kochav Site </button><button type="button" onclick="navigate( 2 )" class="btn btn-info btn-lg btn-block">Raanana Site </button><button type="button" onclick="navigate( 3 )" class="btn btn-info btn-lg btn-block">Tel-Aviv Site </button><button type="button" onclick="navigate( 4 )" class="btn btn-info btn-lg btn-block">Ramat-Gan Site </button><button type="button" onclick="navigate( 5 )" class="btn btn-info btn-lg btn-block">Tel-Hai Site </button><button type="button" onclick="navigate( 6 )" class="btn btn-info btn-lg btn-block">Kiryat Gat Site </button><button type="button" onclick="navigate( 7 )" class="btn btn-info btn-lg btn-block">Beer-Sheva Site </button><button type="button" onclick="navigate( 8 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Denmark Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 9 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Berkshire Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 10 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Beijing Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 11 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Taiwan Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 12 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Boston Site - MTB <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 13 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Boston Site - MTBU <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 14 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">New York Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 15 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Japan Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 16 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">North Carolina Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 17 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Redmond Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 18 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Austin Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 19 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Sunnyvale Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button><button type="button" onclick="navigate( 20 )" class="btn btn-info btn-lg btn-block" style="background-color:rgba(218, 214, 217, 0.97); border-color:rgba(101, 97, 100, 0.97); color:rgba(101, 97, 100, 0.97);">Monterey Park Site <span class="glyphicon glyphicon glyphicon-plane" aria-hidden="true"></span></button></div>
 	  </div>
   </div>
 </div>
